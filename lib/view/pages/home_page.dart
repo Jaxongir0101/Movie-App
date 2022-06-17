@@ -54,9 +54,9 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 34),
+              padding: const EdgeInsets.only(left: 46),
               child: SizedBox(
-                height: 430,
+                height: 400,
                 child: PageView.builder(
                     itemCount: data.movies.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: 240,
+              height: 220,
               child: PageView.builder(
                   itemCount: data.movies.length,
                   pageSnapping: true,

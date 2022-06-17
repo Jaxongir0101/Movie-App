@@ -29,6 +29,10 @@ class DetailsPage extends StatelessWidget {
             child: Divider(color: Colors.white),
           )),
           SliverToBoxAdapter(
+              child: Container(
+                color: Colors.red,
+                child: buildGanre(movie.genreIds!))),
+          SliverToBoxAdapter(
             child: SizedBox(
               height: 30,
               child: Center(
@@ -125,6 +129,21 @@ class DetailsPage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget buildGanre(List<int> genres) {
+    List<Widget> widgets = [];
+    genres.forEach((element) {
+      widgets.add(Text(
+        "-$element",
+        style: TextStyle(color: Colors.white),
+      ));
+    });
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: widgets,
     );
   }
 }

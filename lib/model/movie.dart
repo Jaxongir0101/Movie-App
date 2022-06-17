@@ -34,7 +34,7 @@ class Movie {
   bool? adult;
   String? backdropPath;
   List<int>? genreIds;
-  int? id;
+  num? id;
   String? originalLanguage;
   String? originalTitle;
   String? overview;
@@ -43,7 +43,7 @@ class Movie {
   String? releaseDate;
   String? title;
   bool? video;
-  int? voteAverage;
+  num? voteAverage;
   num? voteCount;
 
   Movie(
@@ -80,7 +80,7 @@ class Movie {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['adult'] = this.adult;
     data['backdrop_path'] = this.backdropPath;
     data['genre_ids'] = this.genreIds;

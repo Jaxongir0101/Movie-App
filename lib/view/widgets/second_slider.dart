@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/model/movie.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+
 
 import '../pages/details_page.dart';
 
@@ -26,10 +26,11 @@ class SecondSlider extends StatelessWidget {
         );
       },
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
-        curve: Curves.easeInOutCubic,
+        duration:const Duration(milliseconds: 900),
+        curve: Curves.easeOutSine,
         margin: EdgeInsets.all(margin),
         decoration: BoxDecoration(
+        
             image: DecorationImage(
                 image: NetworkImage(
                     "http://image.tmdb.org/t/p/w500/${movie.posterPath}"))),
